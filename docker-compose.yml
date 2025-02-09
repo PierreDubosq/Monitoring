@@ -8,6 +8,7 @@ services:
     restart: always
     volumes:
       - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+      - alertmanager:/alertmanager
 
   grafana:
     environment:
@@ -64,5 +65,6 @@ networks:
 
 
 volumes:
+  alertmanager:
   grafana:
   prometheus:
